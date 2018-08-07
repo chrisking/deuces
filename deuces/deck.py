@@ -1,4 +1,4 @@
-from random import shuffle as rshuffle
+import numpy as np
 from .card import Card
 
 
@@ -16,7 +16,7 @@ class Deck:
     def shuffle(self):
         # and then shuffle
         self.cards = Deck.GetFullDeck()
-        rshuffle(self.cards)
+        np.random.shuffle(self.cards)
 
     def draw(self, n=1):
         if n == 1:
